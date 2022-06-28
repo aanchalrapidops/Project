@@ -26,11 +26,7 @@ const ParseExcel = () => {
     }
     setHeaderObj(jsonData[0])
   }
-  console.log(
-    'completeData',
-    completeData,
-  )
-
+  console.log('completeData', completeData)
   return (
     <>
       {fileName ? <h1>{fileName}</h1> : ''}

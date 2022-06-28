@@ -10,7 +10,6 @@ const FieldSelected = ({ selectionArr, headers, index, setselected, selected }) 
         onChange={(event) => {
           setselected({ ...selected, [event.target.name]: event.target.value })
         }}
-        // value={selected[headers[index]]}
       >
         <option value="">select a field</option>
         {selectionArr.map((item, index2) => {
