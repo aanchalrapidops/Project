@@ -43,13 +43,15 @@ To get started with the app, first clone the repo to your system
 
 > $ git clone https://github.com/aanchalrapidops/Project.git
 
+Install nodemodules
+
+>npm install
+
+
 then go to Backend Directory 
 
 >cd Backend
  
-Now install nodemodules
-
->npm install
 
 Start the server
 
