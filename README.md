@@ -1,8 +1,52 @@
-# Getting Started with Create React App
+# How to download mongo db in windows
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Step 1 — Download the MongoDB MSI Installer Package
+> Head over [here](https://www.mongodb.com/download-center/community) and download the current version of MongoDB. Make sure you select MSI as the package you want to download.
 
-## Available Scripts
+### Step 2 — Install MongoDB with the Installation Wizard
+> Make sure you are logged in as a user with Admin privileges. Then navigate to your downloads folder and double click on the .msi package you just downloaded. This will launch the installation wizard.
+
+### Step 3— Create the Data Folders to Store our Databases
+> A. Navigate to the C Drive on your computer using Explorer and create a new folder called data here.
+> B. Inside the data folder you just created, create another folder called db.
+
+### Step 4 - Verify Installation using below command
+`mongo --version`
+
+<hr>
+
+# How to install and Run MongoDB in macOS
+> Open the Terminal app and type brew update.
+
+> After updating Homebrew brew install mongodb.
+
+> After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running `mkdir -p /data/db`
+
+> Make sure that the /data/db directory has the right permissions by running
+
+> `sudo chown -R id -un /data/db`
+`# Enter your password`
+
+> Run the Mongo daemon, in one of your terminal windows run mongod. This should start the Mongo server.
+
+> Run the Mongo shell, with the Mongo daemon running in one terminal, type mongo in another terminal window. This will run the Mongo shell which is an application to access data in MongoDB.
+
+> To exit the Mongo shell run quit()
+
+> To stop the Mongo daemon hit ctrl-c
+
+<hr>
+
+## Steps about how to run the project
+
+To get started with the app, first clone the repo to your system
+
+> $ git clone https://github.com/aanchalrapidops/Project.git
+
+then go to Backend Directory and start `nodemon`
+
+
+## To Start React App
 
 In the project directory, you can run:
 
@@ -11,60 +55,3 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
