@@ -51,6 +51,10 @@ Now install nodemodules
 
 >npm install
 
+Start the server
+
+>node index.js
+
 ## To Start React App
 
 In the project directory, you can run:
