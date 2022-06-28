@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema({
   },
 });
 const User = mongoose.model("User", userSchema);
+
 app.get("/getalldata", async (req, res) => {
   const user = await User.find();
   res.send(user);
 });
-// const user=await User();
 
 app.post("/reg", async (req, res) => {
   const usersData = new User(req.body);
@@ -42,6 +42,8 @@ app.post("/reg", async (req, res) => {
     res.status(400).json("error");
   }
 });
+
+
 app.get("/getskuDetails/:skuid", async (req, res) => {
   console.log("skuuuidd", req.params.skuid);
 
@@ -60,18 +62,18 @@ app.get("/getskuDetails/:skuid", async (req, res) => {
             return res.send("notnull");
         }
 });
-app.post("/csv",async(req,res)=>{
 
+
+
+app.post("/csv",async(req,res)=>{
 const date = new Date()
-const requiredFormat = `
+const format = `
 
 ${date.getFullYear().toString().padStart(4, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}-${date
 .getHours()
 .toString()
-.padStart(2, '0')}${date
-.getMinutes()
-.toString()
-.padStart(2, '0')}${date.getSeconds().toString().padStart(2, '0')}`
+.padStart(2, '0')}-
+${date.getMinutes().toString().padStart(2, '0')}-${date.getSeconds().toString().padStart(2, '0')}`
 
 // $product-import-error-${requiredFormat}.csv
 
@@ -88,7 +90,7 @@ const resultid = req.body.completeData.filter(obj => {
         throw err;
     }
     console.log(csv);
-    fs.writeFileSync(`../product-import-success-${requiredFormat}.csv`, csv);
+    fs.writeFileSync(`../product-import-success-${format}.csv`, csv);
   });
     converter.json2csv(resulterr, (err, csv) => {
       if (err) {
