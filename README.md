@@ -43,8 +43,13 @@ To get started with the app, first clone the repo to your system
 
 > $ git clone https://github.com/aanchalrapidops/Project.git
 
-then go to Backend Directory and start `nodemon`
+then go to Backend Directory 
 
+>cd Backend
+ 
+Now install nodemodules
+
+>npm install
 
 ## To Start React App
 
